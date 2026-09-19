@@ -1,11 +1,14 @@
-const CACHE_NAME = 'padipp-os-v1.2.0';
+const CACHE_NAME = 'padipp-os-v1.3.1';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
+  './404.html',
   './manifest.json',
   './assets/icons/favicon.svg',
   './assets/icons/icon-192.svg',
   './assets/icons/icon-512.svg',
+  './assets/icons/og-image.svg',
+  './assets/og-image.svg',
   './css/main.css',
   './css/landing.css',
   './css/dashboard.css',

@@ -58,6 +58,10 @@
   .privacy-card {
     gap: 32px;
   }
+
+  .landing-nav-links {
+    display: none;
+  }
 }
 
 /* ============================================================
@@ -130,39 +134,83 @@
 
   /* ---- Landing nav ---- */
   .landing-nav-container {
-    padding: 0 16px;
+    padding: 0 12px;
+    height: 56px;
   }
 
   .landing-nav-links {
-    display: none;
+    display: none !important;
+  }
+
+  .nav-right {
+    gap: 8px;
+  }
+
+  .nav-cta-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .brand-logo .brand-main,
+  .brand-logo .brand-suffix {
+    font-size: 1.25rem;
   }
 
   /* ---- Hero ---- */
   .hero-section {
-    padding: 40px 16px 36px;
+    padding: 28px 16px 32px;
     text-align: center;
   }
 
-  .hero-badge {
-    margin: 0 auto 16px;
+  .hero-pill-badge {
+    padding: 5px 14px;
+    font-size: 0.75rem;
+    margin-bottom: 18px;
+    max-width: 96%;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.35;
   }
 
   .hero-title {
-    font-size: clamp(2rem, 8vw, 2.6rem);
+    font-size: clamp(2.4rem, 10vw, 3.4rem);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 12px;
   }
 
   .hero-subtitle {
-    font-size: 1.1rem;
-    margin: 0 auto;
+    font-size: 1.2rem;
+    margin: 0 auto 6px;
+    max-width: 95%;
+    line-height: 1.3;
+  }
+
+  .hero-brand-statement {
+    font-size: 0.725rem;
+    letter-spacing: 0.14em;
+    margin: 0 auto 8px;
     max-width: 90%;
   }
 
-  .hero-actions {
-    justify-content: center;
+  .hero-tagline {
+    font-size: 0.825rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;
   }
 
-  .hero-tagline {
-    font-size: 0.8rem;
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 92%;
+  }
+
+  .hero-actions {
+    gap: 10px;
+    width: 100%;
+    max-width: 340px;
   }
 
   /* ---- Browser mockup ---- */
@@ -402,7 +450,8 @@
    ============================================================ */
 @media (max-width: 414px) {
   .hero-title {
-    font-size: 2rem;
+    font-size: 2.15rem;
+    line-height: 1;
   }
 
   .hero-actions {
@@ -425,6 +474,27 @@
 }
 
 /* ============================================================
+   SMALL PHONES  (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 36px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-preview-container {
+    margin-top: 10px;
+  }
+}
+
+/* ============================================================
    VERY SMALL PHONES  (≤ 360px)
    ============================================================ */
 @media (max-width: 360px) {
@@ -432,12 +502,23 @@
     --header-height: 52px;
   }
 
-  .hero-title {
-    font-size: 1.85rem;
+  .landing-nav-container {
+    padding: 0 8px;
   }
 
-  .brand-logo .brand-main {
-    font-size: 1.2rem;
+  .nav-cta-btn {
+    padding: 5px 8px;
+    font-size: 0.75rem;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+    line-height: 1;
+  }
+
+  .brand-logo .brand-main,
+  .brand-logo .brand-suffix {
+    font-size: 1.15rem;
   }
 
   .metric-value {

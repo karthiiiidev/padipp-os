@@ -1,10 +1,12 @@
-# PADIPP.OS — Student Academic Operating System
+# PADIPP.OS — Your Academic Operating System
 
+> **PADIPP.OS**  
 > **Your Academic Operating System**  
+> *Built for Engineers. By an Engineer.*  
 > *Track. Plan. Predict.*  
 > **From Trivandrum, Kerala**
 
-PADIPP.OS is a modern, production-grade, offline-first student academic operating system engineered for students, engineers, and researchers. It combines Kerala's cultural identity of *Padippu* (learning/education) with an Operating System philosophy to streamline academic planning, attendance compliance, internal assessment forecasting, class timetables, and deadline countdowns.
+PADIPP.OS is a student academic operating system designed to simplify the everyday academic work students deal with — attendance, internal assessment marks, grade planning, timetables, exams and deadlines. Built for Engineers. By an Engineer. Originating from Trivandrum, Kerala.
 
 ---
 

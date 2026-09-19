@@ -5,14 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-  <title>PADIPP.OS — Your Academic Operating System</title>
-  <meta name="description" content="A smart student dashboard for attendance tracking, internal assessment prediction, timetables, exams and academic planning. Track. Plan. Predict. From Trivandrum, Kerala.">
-  <meta name="theme-color" content="#0f172a">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W6956V0LWZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
 
-  <!-- PWA Manifest & Favicon -->
+    gtag('js', new Date());
+
+    gtag('config', 'G-W6956V0LWZ');
+  </script>
+
+  <title>PADIPP.OS — Your Academic Operating System</title>
+  <meta name="description" content="Track attendance, plan your academics, predict required exam scores and stay ahead of college deadlines. Built for Engineers. By an Engineer.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="KarthiiiDev">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Canonical URL (Configurable base domain for production deployment) -->
+  <link rel="canonical" href="https://padipp-os.vercel.app/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PADIPP.OS — Your Academic Operating System">
+  <meta property="og:description" content="Track attendance, plan your academics, predict required exam scores and stay ahead of college deadlines. Built for Engineers. By an Engineer.">
+  <meta property="og:url" content="https://padipp-os.vercel.app/">
+  <meta property="og:site_name" content="PADIPP.OS">
+  <meta property="og:image" content="https://padipp-os.vercel.app/assets/icons/og-image.svg">
+  <meta property="og:image:alt" content="PADIPP.OS — Your Academic Operating System">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PADIPP.OS — Your Academic Operating System">
+  <meta name="twitter:description" content="Track attendance, plan your academics, predict required exam scores and stay ahead of college deadlines. Built for Engineers. By an Engineer.">
+  <meta name="twitter:image" content="https://padipp-os.vercel.app/assets/icons/og-image.svg">
+  <meta name="twitter:image:alt" content="PADIPP.OS — Your Academic Operating System">
+
+  <!-- PWA Manifest & Favicons -->
   <link rel="manifest" href="./manifest.json">
   <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
   <link rel="apple-touch-icon" href="./assets/icons/icon-192.svg">
+
+  <!-- Font Preconnect & Performance Hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./css/main.css">
@@ -23,6 +60,144 @@
 
   <!-- Chart.js Library -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Structured Data: WebSite Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "PADIPP.OS",
+    "alternateName": "PADIPP.OS — Your Academic Operating System",
+    "url": "https://padipp-os.vercel.app/",
+    "description": "Track attendance, plan your academics, predict required exam scores and stay ahead of college deadlines. Built for Engineers. By an Engineer.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "PADIPP.OS",
+      "url": "https://padipp-os.vercel.app/",
+      "logo": "https://padipp-os.vercel.app/assets/icons/icon-512.svg"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PADIPP.OS",
+    "alternateName": "PADIPP.OS — Your Academic Operating System",
+    "url": "https://padipp-os.vercel.app/",
+    "logo": "https://padipp-os.vercel.app/assets/icons/icon-512.svg",
+    "description": "Student academic operating system for attendance tracking, internal assessments, class timetables, and exam planning. Built for Engineers. By an Engineer. From Trivandrum, Kerala.",
+    "areaServed": "IN",
+    "founder": {
+      "@type": "Person",
+      "name": "KarthiiiDev",
+      "url": "https://karthiiiidev.vercel.app/"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: SoftwareApplication Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["SoftwareApplication", "WebApplication"],
+    "name": "PADIPP.OS",
+    "alternateName": "PADIPP.OS — Your Academic Operating System",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Web Browser",
+    "url": "https://padipp-os.vercel.app/",
+    "description": "Offline-first student academic operating system featuring attendance calculation with 75% buffer margins, internal assessment solvers, target grade prediction, weekly timetable countdowns, and exam trackers. Built for Engineers. By an Engineer.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage Schema (Matches Visible Page FAQs) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is PADIPP.OS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PADIPP.OS is a student academic dashboard designed to help college and university students manage attendance, internal assessment marks, grades, timetables, exams and academic deadlines in one place, using client-side discrete calculations tailored to each student's academic regulations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the attendance calculator work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The calculator takes total classes conducted, classes attended, and required attendance percentage (such as 75%). It uses integer floor arithmetic to calculate how many upcoming classes can be safely missed, or ceiling arithmetic to determine how many consecutive classes must be attended to recover."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can PADIPP.OS calculate how many classes I can miss?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. If your current attendance is above your required threshold, PADIPP.OS calculates your safe buffer margin using the formula: floor(Attended / ReqPercent - Conducted)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I calculate the exam marks required for a target grade?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. By inputting your scored internal assessment marks and choosing your target letter grade, the IA solver calculates the exact final semester exam marks needed to reach that grade boundary."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I customize my university's grading system?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. In the Settings tab, students can configure minimum attendance thresholds, maximum internal marks, university exam weightings, and letter grade boundaries according to their institution's syllabus."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does PADIPP.OS work on mobile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. PADIPP.OS is fully responsive and optimized for mobile phones (including 320px screens), tablets, and desktops, featuring a mobile app bottom navigation bar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does PADIPP.OS work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. PADIPP.OS is built with an offline-first Progressive Web App (PWA) architecture with Service Worker caching and local IndexedDB database storage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is an account or login required?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. No account, sign-up, email, or password is required. Your personal academic data is saved exclusively inside your browser's private IndexedDB storage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is PADIPP.OS from?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PADIPP.OS is a student-focused technology project originating from Trivandrum, Kerala, engineered for college and university students globally."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -42,12 +217,17 @@
           </span>
         </div>
         <div class="nav-right">
-          <a href="#features-section" class="nav-link">Features</a>
-          <a href="#privacy-section" class="nav-link">Privacy</a>
+          <div class="landing-nav-links">
+            <a href="#features-section" class="nav-link">Features</a>
+            <a href="#academic-guides" class="nav-link">Guides</a>
+            <a href="#faq-section" class="nav-link">FAQ</a>
+            <a href="#about-section" class="nav-link">About</a>
+            <a href="#privacy-section" class="nav-link">Privacy</a>
+          </div>
           <button class="btn btn-secondary btn-icon theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
           </button>
-          <a href="#overview" class="btn btn-primary btn-sm">Open Dashboard</a>
+          <a href="#overview" class="btn btn-primary btn-sm nav-cta-btn">Open Dashboard</a>
         </div>
       </div>
     </header>
@@ -56,19 +236,16 @@
     <section class="hero-section">
       <div class="hero-pill-badge">
         <span class="hero-pill-dot"></span>
-        <span>Student Academic Operating System • From Trivandrum, Kerala</span>
+        <span>From Trivandrum, Kerala</span>
       </div>
 
-      <h1 class="hero-title">
+      <h1 class="hero-title" aria-label="PADIPP.OS — Your Academic Operating System">
         PADIPP<span class="brand-accent">.OS</span>
       </h1>
 
       <div class="hero-subtitle">Your Academic Operating System</div>
+      <div class="hero-brand-statement">Built for Engineers. By an Engineer.</div>
       <div class="hero-tagline">Track. Plan. Predict.</div>
-
-      <p class="hero-description">
-        A smart student dashboard for attendance compliance, internal assessment forecasting, class schedules, exam countdowns and academic planning.
-      </p>
 
       <div class="hero-actions">
         <a href="#overview" class="btn btn-primary btn-lg">
@@ -141,37 +318,41 @@
     <div class="marquee-container">
       <div class="marquee-track">
         <div class="marquee-content">
-          <span>TRACK YOUR ATTENDANCE</span>
+          <span>PADIPP.OS</span>
           <span class="marquee-separator">•</span>
-          <span>PREDICT YOUR SCORE</span>
+          <span>BUILT FOR ENGINEERS</span>
           <span class="marquee-separator">•</span>
-          <span>PLAN YOUR WEEK</span>
+          <span>BY AN ENGINEER</span>
           <span class="marquee-separator">•</span>
-          <span>STAY AHEAD</span>
+          <span>ATTENDANCE</span>
           <span class="marquee-separator">•</span>
-          <span>OFFLINE FIRST</span>
+          <span>IA PREDICTOR</span>
           <span class="marquee-separator">•</span>
-          <span>ZERO CLOUD TRACKING</span>
+          <span>TIMETABLE</span>
           <span class="marquee-separator">•</span>
-          <span>EXACT DISCRETE MATHEMATICS</span>
+          <span>EXAM COUNTDOWN</span>
+          <span class="marquee-separator">•</span>
+          <span>ANALYTICS</span>
           <span class="marquee-separator">•</span>
           <span>FROM TRIVANDRUM, KERALA</span>
           <span class="marquee-separator">•</span>
         </div>
         <div class="marquee-content" aria-hidden="true">
-          <span>TRACK YOUR ATTENDANCE</span>
+          <span>PADIPP.OS</span>
           <span class="marquee-separator">•</span>
-          <span>PREDICT YOUR SCORE</span>
+          <span>BUILT FOR ENGINEERS</span>
           <span class="marquee-separator">•</span>
-          <span>PLAN YOUR WEEK</span>
+          <span>BY AN ENGINEER</span>
           <span class="marquee-separator">•</span>
-          <span>STAY AHEAD</span>
+          <span>ATTENDANCE</span>
           <span class="marquee-separator">•</span>
-          <span>OFFLINE FIRST</span>
+          <span>IA PREDICTOR</span>
           <span class="marquee-separator">•</span>
-          <span>ZERO CLOUD TRACKING</span>
+          <span>TIMETABLE</span>
           <span class="marquee-separator">•</span>
-          <span>EXACT DISCRETE MATHEMATICS</span>
+          <span>EXAM COUNTDOWN</span>
+          <span class="marquee-separator">•</span>
+          <span>ANALYTICS</span>
           <span class="marquee-separator">•</span>
           <span>FROM TRIVANDRUM, KERALA</span>
           <span class="marquee-separator">•</span>
@@ -214,10 +395,10 @@
     <!-- Features Section -->
     <section class="features-section" id="features-section">
       <div class="section-header">
-        <div class="section-tag">ENGINEERED FOR REAL ACADEMICS</div>
+        <div class="section-tag">BUILT FOR ENGINEERS. BY AN ENGINEER.</div>
         <h2 class="section-title">Everything you need to master your semester</h2>
         <p class="section-description">
-          Built to eliminate guesswork. Accurate formulas, instant scenario simulations, and zero server dependencies.
+          PADIPP.OS is a student academic operating system designed to simplify the everyday academic work students deal with — attendance, internal assessment marks, grade planning, timetables, exams and deadlines.
         </p>
       </div>
 
@@ -342,6 +523,239 @@
       </div>
     </section>
 
+    <!-- Academic Methodology & Topic Deep Dives (SEO & Semantic Foundation) -->
+    <section class="seo-content-section" id="academic-guides">
+      <div class="section-header">
+        <div class="section-tag">ENGINEERED CALCULATIONS</div>
+        <h2 class="section-title">Academic Methods &amp; Problem Solving</h2>
+        <p class="section-description">
+          Clear, deterministic discrete math designed around the actual dilemmas students face every semester.
+        </p>
+      </div>
+
+      <div class="seo-guide-grid">
+        <!-- Topic 1: Attendance Calculator -->
+        <article class="seo-guide-card">
+          <div>
+            <span class="seo-card-badge">ATTENDANCE CALCULATOR</span>
+            <h3>Attendance Buffer &amp; 75% Shortage Formula</h3>
+            <p>
+              Students can input classes conducted, classes attended, and their required minimum percentage to determine their exact standing. PADIPP.OS calculates whether you have a safe buffer or are in shortage without relying on approximations.
+            </p>
+            <ul>
+              <li><strong>Safe Missable Classes:</strong> <code>⌊Attended / Req% − Conducted⌋</code></li>
+              <li><strong>Required Recovery Classes:</strong> <code>⌈(Req% × Conducted − Attended) / (1 − Req%)⌉</code></li>
+              <li>Instantly test attendance scenarios before taking planned leaves.</li>
+            </ul>
+          </div>
+          <a href="#attendance" class="btn btn-secondary btn-sm" style="margin-top:auto;">
+            Calculate your attendance buffer →
+          </a>
+        </article>
+
+        <!-- Topic 2: IA & Grade Predictor -->
+        <article class="seo-guide-card">
+          <div>
+            <span class="seo-card-badge">IA &amp; GRADE PREDICTOR</span>
+            <h3>Internal Assessment &amp; Required Exam Marks</h3>
+            <p>
+              Enter continuous assessment scores including series tests, assignments, and tutorials to solve for the exact final exam score required to achieve your target letter grade.
+            </p>
+            <ul>
+              <li><strong>Required Exam Marks:</strong> <code>Target Threshold − Total Scored IA</code></li>
+              <li>Real-time score slider simulating final marks from 0 to 100%.</li>
+              <li>Tailored for university schemes with configurable internal caps.</li>
+            </ul>
+          </div>
+          <a href="#ia" class="btn btn-secondary btn-sm" style="margin-top:auto;">
+            Calculate required exam marks →
+          </a>
+        </article>
+
+        <!-- Topic 3: Timetable Planner -->
+        <article class="seo-guide-card">
+          <div>
+            <span class="seo-card-badge">TIMETABLE PLANNER</span>
+            <h3>Student Schedule &amp; Next-Class Live Clocks</h3>
+            <p>
+              Organize your weekly schedule with course titles, lecture halls, and start/end times. The dashboard automatically syncs with your system clock to present current lectures and ticking countdowns.
+            </p>
+            <ul>
+              <li>Instant visual recognition for ongoing classes.</li>
+              <li>Second-by-second countdown to your next lecture.</li>
+              <li>Full Monday to Saturday customizable schedule grid.</li>
+            </ul>
+          </div>
+          <a href="#timetable" class="btn btn-secondary btn-sm" style="margin-top:auto;">
+            Plan your college timetable →
+          </a>
+        </article>
+
+        <!-- Topic 4: Exam & Assignment Countdown -->
+        <article class="seo-guide-card">
+          <div>
+            <span class="seo-card-badge">EXAM TRACKER</span>
+            <h3>Deadlines, Practical Exams &amp; Milestones</h3>
+            <p>
+              Keep assignment submissions, lab records, project evaluations, and end-semester university exams categorized in one clean timeline with countdown clocks.
+            </p>
+            <ul>
+              <li>Live Day/Hour/Minute/Second countdown tickers.</li>
+              <li>Priority filtering by exam, assignment, project, or event.</li>
+              <li>Complete task completion toggle for submitted work.</li>
+            </ul>
+          </div>
+          <a href="#events" class="btn btn-secondary btn-sm" style="margin-top:auto;">
+            Track upcoming deadlines →
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions Section (Crawlable & Accessible) -->
+    <section class="faq-section" id="faq-section">
+      <div class="section-header">
+        <div class="section-tag">COMMON QUESTIONS</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-description">
+          Straight answers to common questions about PADIPP.OS, its mathematical logic, and data privacy.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary class="faq-question">What is PADIPP.OS?</summary>
+          <div class="faq-answer">
+            <p>
+              PADIPP.OS is a student academic dashboard designed to help college and university students track attendance, forecast internal assessment marks, solve for required exam scores, manage class timetables, and monitor exam deadlines in one place.
+            </p>
+            <p>
+              Calculations are executed client-side in the browser according to the student's own academic regulations, without sending academic records to external servers.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">How does the attendance calculator work?</summary>
+          <div class="faq-answer">
+            <p>
+              You enter your total conducted classes, attended classes, and required minimum attendance percentage (typically 75% or 80%).
+            </p>
+            <p>
+              PADIPP.OS uses discrete integer formulas to evaluate your exact buffer margin: <code>floor(Attended / ReqPercent - Conducted)</code>. If your attendance is below the threshold, it calculates the consecutive classes you must attend to recover: <code>ceil((ReqPercent * Conducted - Attended) / (1 - ReqPercent))</code>.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Can PADIPP.OS calculate how many classes I can miss?</summary>
+          <div class="faq-answer">
+            <p>
+              Yes. When your attendance percentage is above your required cutoff, each subject card displays your exact safe margin (e.g. "Can miss 3 classes safely"). The calculation updates instantly as you log classes.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Can I calculate the exam marks required for a target grade?</summary>
+          <div class="faq-answer">
+            <p>
+              Yes. Enter your scored internal marks (such as Midterms, Assignments, and Attendance) and select your target letter grade (S, A, B, C, etc.). The predictor calculates the precise semester exam score needed to achieve the total percentage required for that grade.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Can I customize my university's grading system?</summary>
+          <div class="faq-answer">
+            <p>
+              Yes. Through the Settings tab, students can configure their minimum attendance percentage, maximum internal assessment marks, university end-semester exam weightings, and specific grade boundary percentages.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Does PADIPP.OS work on mobile?</summary>
+          <div class="faq-answer">
+            <p>
+              Yes. PADIPP.OS is built mobile-first. It is fully responsive across smartphone screen sizes (including compact 320px devices), tablets, and desktop displays, complete with an app bottom navigation bar.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Does PADIPP.OS work offline?</summary>
+          <div class="faq-answer">
+            <p>
+              Yes. PADIPP.OS is an offline-first Progressive Web App (PWA). All application assets are cached via a Service Worker, and academic data is stored directly on your device inside browser IndexedDB. You can use it without an active internet connection.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Is an account or login required?</summary>
+          <div class="faq-answer">
+            <p>
+              No. PADIPP.OS does not require accounts, logins, emails, or passwords. Your academic records stay exclusively on your device. You can export or restore complete JSON backups anytime from Settings.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Where is PADIPP.OS from?</summary>
+          <div class="faq-answer">
+            <p>
+              PADIPP.OS is a student-focused productivity project from Trivandrum, Kerala, designed to serve engineering, science, and arts college students across India and globally.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- About Section (Geo Context & Factual Attribution) -->
+    <section class="about-section" id="about-section">
+      <div class="about-card">
+        <div class="about-content">
+          <h2>About PADIPP.OS</h2>
+          <p>
+            PADIPP.OS is a student academic operating system designed to simplify the everyday academic work students deal with — attendance, internal assessment marks, grade planning, timetables, exams and deadlines.
+          </p>
+          <p>
+            Built for Engineers. By an Engineer. The platform translates complex academic regulations, discrete attendance buffer formulas, and grade thresholds into clean, practical tools that eliminate guesswork and stress.
+          </p>
+          <p>
+            Originating from Trivandrum, Kerala, PADIPP.OS runs 100% client-side in your browser with private IndexedDB persistence and offline PWA capability.
+          </p>
+        </div>
+        <div class="about-meta-box">
+          <div class="about-meta-row">
+            <span class="about-meta-label">Product</span>
+            <span class="about-meta-val">PADIPP.OS</span>
+          </div>
+          <div class="about-meta-row">
+            <span class="about-meta-label">Identity</span>
+            <span class="about-meta-val">Built for Engineers. By an Engineer.</span>
+          </div>
+          <div class="about-meta-row">
+            <span class="about-meta-label">Origin</span>
+            <span class="about-meta-val">From Trivandrum, Kerala</span>
+          </div>
+          <div class="about-meta-row">
+            <span class="about-meta-label">Architecture</span>
+            <span class="about-meta-val">Offline-First PWA</span>
+          </div>
+          <div class="about-meta-row">
+            <span class="about-meta-label">Data Privacy</span>
+            <span class="about-meta-val">100% Client-Side</span>
+          </div>
+          <div class="about-meta-row">
+            <span class="about-meta-label">Developer</span>
+            <span class="about-meta-val"><a href="https://karthiiiidev.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link">KarthiiiDev</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Final CTA -->
     <section style="text-align:center; padding: 40px 24px 80px; max-width:var(--container-max-width); margin:0 auto;">
       <h2 style="font-size:2.2rem; font-weight:800; margin-bottom:14px;">Ready to take control of your semester?</h2>
@@ -353,21 +767,22 @@
       </a>
     </section>
 
-    <!-- Minimal Compact Professional Footer -->
+    <!-- Clean Professional Footer -->
     <footer class="landing-footer">
       <div class="footer-container">
-        <div class="footer-brand-meta">
+        <div class="footer-brand-lockup">
           <div class="brand-logo">
             <span class="brand-main">PADIPP</span><span class="brand-suffix">.OS</span>
           </div>
-          <span class="brand-origin-badge">From Trivandrum, Kerala</span>
-          <span class="footer-tagline">Track. Plan. Predict.</span>
+          <div class="footer-tagline">Your Academic Operating System</div>
+          <div class="footer-statement">Built for Engineers. By an Engineer.</div>
+          <div class="footer-origin">From Trivandrum, Kerala</div>
         </div>
 
         <div class="footer-dev">
           <span>Built by</span>
           <a href="https://karthiiiidev.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link">
-            karthiiii.dev
+            KarthiiiDev
           </a>
         </div>
       </div>
@@ -425,7 +840,7 @@
         <div class="sidebar-credit">
           <span>Built by</span>
           <a href="https://karthiiiidev.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link">
-            karthiiii.dev
+            KarthiiiDev
           </a>
         </div>
         <a href="#landing" class="btn btn-ghost btn-sm" style="justify-content:flex-start; width:100%;">
@@ -466,29 +881,33 @@
           <div class="dash-marquee-content">
             <span><span class="dash-live-dot"></span>SYSTEM OPERATIONAL</span>
             <span class="dash-marquee-sep">•</span>
+            <span>PADIPP.OS</span>
+            <span class="dash-marquee-sep">•</span>
+            <span>TRACK. PLAN. PREDICT.</span>
+            <span class="dash-marquee-sep">•</span>
+            <span>BUILT FOR ENGINEERS. BY AN ENGINEER.</span>
+            <span class="dash-marquee-sep">•</span>
             <span>ALL DATA PERSISTED LOCALLY IN INDEXEDDB</span>
             <span class="dash-marquee-sep">•</span>
             <span>ZERO CLOUD TELEMETRY</span>
             <span class="dash-marquee-sep">•</span>
-            <span>ATTENDANCE BUFFER &amp; RECOVERY COMPLIANT</span>
-            <span class="dash-marquee-sep">•</span>
-            <span>REAL-TIME CLASS DETECTION</span>
-            <span class="dash-marquee-sep">•</span>
-            <span>TRIVANDRUM, KERALA</span>
+            <span>FROM TRIVANDRUM, KERALA</span>
             <span class="dash-marquee-sep">•</span>
           </div>
           <div class="dash-marquee-content" aria-hidden="true">
             <span><span class="dash-live-dot"></span>SYSTEM OPERATIONAL</span>
             <span class="dash-marquee-sep">•</span>
+            <span>PADIPP.OS</span>
+            <span class="dash-marquee-sep">•</span>
+            <span>TRACK. PLAN. PREDICT.</span>
+            <span class="dash-marquee-sep">•</span>
+            <span>BUILT FOR ENGINEERS. BY AN ENGINEER.</span>
+            <span class="dash-marquee-sep">•</span>
             <span>ALL DATA PERSISTED LOCALLY IN INDEXEDDB</span>
             <span class="dash-marquee-sep">•</span>
             <span>ZERO CLOUD TELEMETRY</span>
             <span class="dash-marquee-sep">•</span>
-            <span>ATTENDANCE BUFFER &amp; RECOVERY COMPLIANT</span>
-            <span class="dash-marquee-sep">•</span>
-            <span>REAL-TIME CLASS DETECTION</span>
-            <span class="dash-marquee-sep">•</span>
-            <span>TRIVANDRUM, KERALA</span>
+            <span>FROM TRIVANDRUM, KERALA</span>
             <span class="dash-marquee-sep">•</span>
           </div>
         </div>
@@ -794,12 +1213,14 @@
             <span class="dash-footer-bullet">•</span>
             <span>Your Academic Operating System</span>
             <span class="dash-footer-bullet">•</span>
+            <span>Built for Engineers. By an Engineer.</span>
+            <span class="dash-footer-bullet">•</span>
             <span>From Trivandrum, Kerala</span>
           </div>
           <div class="dash-footer-right">
             <span>Built by</span>
             <a href="https://karthiiiidev.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link">
-              karthiiii.dev
+              KarthiiiDev
             </a>
           </div>
         </div>

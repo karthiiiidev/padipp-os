@@ -1,0 +1,8 @@
+# robots.txt for PADIPP.OS
+# Student Academic Operating System — https://padipp-os.vercel.app/
+
+User-agent: *
+Allow: /
+
+# Canonical XML Sitemap
+Sitemap: https://padipp-os.vercel.app/sitemap.xml

@@ -73,6 +73,15 @@ class AppController {
     if (landingView) landingView.style.display = 'block';
     if (appWrapper) appWrapper.style.display = 'none';
 
+    // Ensure landing page is indexable
+    let robotsMeta = document.querySelector('meta[name="robots"]');
+    if (!robotsMeta) {
+      robotsMeta = document.createElement('meta');
+      robotsMeta.name = 'robots';
+      document.head.appendChild(robotsMeta);
+    }
+    robotsMeta.content = 'index, follow';
+
     window.scrollTo(0, 0);
   }
 
@@ -85,6 +94,15 @@ class AppController {
 
     if (landingView) landingView.style.display = 'none';
     if (appWrapper) appWrapper.style.display = 'flex';
+
+    // Prevent search indexing of active student dashboard session state
+    let robotsMeta = document.querySelector('meta[name="robots"]');
+    if (!robotsMeta) {
+      robotsMeta = document.createElement('meta');
+      robotsMeta.name = 'robots';
+      document.head.appendChild(robotsMeta);
+    }
+    robotsMeta.content = 'noindex, nofollow';
 
     // Update active tab buttons in desktop sidebar and mobile bottom nav
     document.querySelectorAll('.nav-item, .mobile-nav-item').forEach((item) => {

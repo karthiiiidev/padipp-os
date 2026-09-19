@@ -1,11 +1,16 @@
 {
   "name": "PADIPP.OS — Your Academic Operating System",
   "short_name": "PADIPP.OS",
-  "description": "Smart academic operating system for attendance tracking, internal assessment prediction, timetables, exams and academic planning.",
-  "start_url": "./index.html",
+  "description": "Track attendance, plan your academics, predict required exam scores and stay ahead of college deadlines. Built for Engineers. By an Engineer.",
+  "id": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#090d16",
-  "theme_color": "#0f172a",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "categories": ["education", "productivity", "utilities"],
+  "lang": "en",
+  "dir": "ltr",
   "orientation": "portrait-primary",
   "icons": [
     {
