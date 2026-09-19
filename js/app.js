@@ -124,20 +124,18 @@ class AppController {
 
     // Update header title
     const headerTitle = document.getElementById('header-title');
-    const headerSubtitle = document.getElementById('header-subtitle');
     const titles = {
-      overview: { title: 'Academic Overview', sub: 'Status, next classes and active deadlines' },
-      attendance: { title: 'Attendance Manager', sub: 'Buffer calculations and minimum requirements' },
-      ia: { title: 'IA & Grade Predictor', sub: 'Internal marks solver and exam simulator' },
-      timetable: { title: 'Class Timetable', sub: 'Weekly schedule and room locations' },
-      events: { title: 'Exams & Deadlines', sub: 'Assignments, submissions and countdowns' },
-      analytics: { title: 'Academic Intelligence', sub: 'Visual analytics and performance benchmarks' },
-      settings: { title: 'System Settings', sub: 'Thresholds, theme and data backup' }
+      overview: 'Academic Overview',
+      attendance: 'Attendance Manager',
+      ia: 'IA & Grade Predictor',
+      timetable: 'Class Timetable',
+      events: 'Exams & Deadlines',
+      analytics: 'Academic Intelligence',
+      settings: 'System Settings'
     };
 
     if (headerTitle && titles[tab]) {
-      headerTitle.textContent = titles[tab].title;
-      if (headerSubtitle) headerSubtitle.textContent = titles[tab].sub;
+      headerTitle.textContent = titles[tab];
     }
 
     // Trigger tab specific renders

@@ -166,7 +166,6 @@ class IAPredictor {
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
             <div>
               <h3 style="font-size:1.15rem; font-weight:700;">Internal Assessment Marks</h3>
-              <p style="font-size:0.8rem; color:var(--text-muted);">Enter your marks for each component to calculate required exam score.</p>
             </div>
             <button class="btn btn-secondary btn-sm" id="btn-add-ia-component">
               + Add Component
@@ -239,7 +238,6 @@ class IAPredictor {
           <div>
             <div style="margin-bottom:16px;">
               <h3 style="font-size:1.15rem; font-weight:700;">Grade Scenario Simulator</h3>
-              <p style="font-size:0.8rem; color:var(--text-muted);">Simulate exam marks to see projected final score and letter grade.</p>
             </div>
 
             <div class="simulator-box">
