@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>PADIPP.OS — Your Academic Operating System</title>
+  <meta name="description" content="A smart student dashboard for attendance tracking, internal assessment prediction, timetables, exams and academic planning. Track. Plan. Predict. From Trivandrum, Kerala.">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- PWA Manifest & Favicon -->
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
+  <link rel="apple-touch-icon" href="./assets/icons/icon-192.svg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/landing.css">
+  <link rel="stylesheet" href="./css/dashboard.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+
+  <!-- Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- ========================================== -->
+  <!-- 1. LANDING PAGE VIEW                       -->
+  <!-- ========================================== -->
+  <div id="view-landing">
+    <!-- Navigation Bar -->
+    <header class="landing-nav">
+      <div class="landing-nav-container">
+        <div class="nav-left">
+          <a href="#landing" class="brand-logo">
+            <span class="brand-main">PADIPP</span><span class="brand-suffix">.OS</span>
+          </a>
+          <span class="brand-origin-badge landing-origin-tag">
+            From Trivandrum, Kerala
+          </span>
+        </div>
+        <div class="nav-right">
+          <a href="#features-section" class="nav-link">Features</a>
+          <a href="#privacy-section" class="nav-link">Privacy</a>
+          <button class="btn btn-secondary btn-icon theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+          <a href="#overview" class="btn btn-primary btn-sm">Open Dashboard</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-pill-badge">
+        <span class="hero-pill-dot"></span>
+        <span>Student Academic Operating System • From Trivandrum, Kerala</span>
+      </div>
+
+      <h1 class="hero-title">
+        PADIPP<span class="brand-accent">.OS</span>
+      </h1>
+
+      <div class="hero-subtitle">Your Academic Operating System</div>
+      <div class="hero-tagline">Track. Plan. Predict.</div>
+
+      <p class="hero-description">
+        A smart student dashboard for attendance compliance, internal assessment forecasting, class schedules, exam countdowns and academic planning.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#overview" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          Open Dashboard
+        </a>
+        <a href="#features-section" class="btn btn-secondary btn-lg">
+          Explore Features
+        </a>
+      </div>
+
+      <!-- Live Realistic Mockup Preview -->
+      <div class="hero-preview-container">
+        <div class="preview-browser-bar">
+          <div class="browser-dots">
+            <div class="browser-dot" style="background:#ef4444;"></div>
+            <div class="browser-dot" style="background:#f59e0b;"></div>
+            <div class="browser-dot" style="background:#10b981;"></div>
+          </div>
+          <div class="browser-url-pill">
+            https://padipp.os/dashboard
+          </div>
+        </div>
+
+        <div class="preview-content-grid">
+          <div class="preview-card">
+            <div>
+              <div class="preview-card-label">Overall Attendance</div>
+              <div class="preview-card-metric" style="color:var(--success);">82.6%</div>
+            </div>
+            <div class="preview-card-desc">
+              <strong>Safe Margin:</strong> Can miss 2 classes safely
+            </div>
+          </div>
+
+          <div class="preview-card">
+            <div>
+              <div class="preview-card-label">IA Performance</div>
+              <div class="preview-card-metric" style="color:var(--accent);">34 <span style="font-size:1.1rem; color:var(--text-muted);">/ 40</span></div>
+            </div>
+            <div class="preview-card-desc">
+              85.0% internal efficiency • Target: Grade A
+            </div>
+          </div>
+
+          <div class="preview-card">
+            <div>
+              <div class="preview-card-label">Next Class</div>
+              <div class="preview-card-metric" style="font-size:1.4rem;">Mathematics</div>
+            </div>
+            <div class="preview-card-desc">
+              10:00 AM • Room 204 • Countdown: <strong style="font-family:var(--font-mono); color:var(--accent);">00:42:18</strong>
+            </div>
+          </div>
+
+          <div class="preview-card">
+            <div>
+              <div class="preview-card-label">Upcoming Exam</div>
+              <div class="preview-card-metric" style="font-size:1.4rem;">Physics IA</div>
+            </div>
+            <div class="preview-card-desc">
+              <span class="badge badge-warning">3 days remaining</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modern Animated Marquee (Dual Technical Track) -->
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span>TRACK YOUR ATTENDANCE</span>
+          <span class="marquee-separator">•</span>
+          <span>PREDICT YOUR SCORE</span>
+          <span class="marquee-separator">•</span>
+          <span>PLAN YOUR WEEK</span>
+          <span class="marquee-separator">•</span>
+          <span>STAY AHEAD</span>
+          <span class="marquee-separator">•</span>
+          <span>OFFLINE FIRST</span>
+          <span class="marquee-separator">•</span>
+          <span>ZERO CLOUD TRACKING</span>
+          <span class="marquee-separator">•</span>
+          <span>EXACT DISCRETE MATHEMATICS</span>
+          <span class="marquee-separator">•</span>
+          <span>FROM TRIVANDRUM, KERALA</span>
+          <span class="marquee-separator">•</span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span>TRACK YOUR ATTENDANCE</span>
+          <span class="marquee-separator">•</span>
+          <span>PREDICT YOUR SCORE</span>
+          <span class="marquee-separator">•</span>
+          <span>PLAN YOUR WEEK</span>
+          <span class="marquee-separator">•</span>
+          <span>STAY AHEAD</span>
+          <span class="marquee-separator">•</span>
+          <span>OFFLINE FIRST</span>
+          <span class="marquee-separator">•</span>
+          <span>ZERO CLOUD TRACKING</span>
+          <span class="marquee-separator">•</span>
+          <span>EXACT DISCRETE MATHEMATICS</span>
+          <span class="marquee-separator">•</span>
+          <span>FROM TRIVANDRUM, KERALA</span>
+          <span class="marquee-separator">•</span>
+        </div>
+      </div>
+
+      <!-- Secondary Technical Reverse Track -->
+      <div class="marquee-track-reverse">
+        <div class="marquee-content-sub">
+          <span>KTU &amp; UNIVERSITY SCHEMES</span>
+          <span class="marquee-separator">•</span>
+          <span>CLIENT-SIDE INDEXEDDB PERSISTENCE</span>
+          <span class="marquee-separator">•</span>
+          <span>REAL-TIME CLASS COUNTDOWN TIMERS</span>
+          <span class="marquee-separator">•</span>
+          <span>NO LOGINS OR PASSWORDS REQUIRED</span>
+          <span class="marquee-separator">•</span>
+          <span>SERVICE WORKER OFFLINE CACHED</span>
+          <span class="marquee-separator">•</span>
+          <span>COMPLETE JSON DATA BACKUP &amp; RESTORE</span>
+          <span class="marquee-separator">•</span>
+        </div>
+        <div class="marquee-content-sub" aria-hidden="true">
+          <span>KTU &amp; UNIVERSITY SCHEMES</span>
+          <span class="marquee-separator">•</span>
+          <span>CLIENT-SIDE INDEXEDDB PERSISTENCE</span>
+          <span class="marquee-separator">•</span>
+          <span>REAL-TIME CLASS COUNTDOWN TIMERS</span>
+          <span class="marquee-separator">•</span>
+          <span>NO LOGINS OR PASSWORDS REQUIRED</span>
+          <span class="marquee-separator">•</span>
+          <span>SERVICE WORKER OFFLINE CACHED</span>
+          <span class="marquee-separator">•</span>
+          <span>COMPLETE JSON DATA BACKUP &amp; RESTORE</span>
+          <span class="marquee-separator">•</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features-section">
+      <div class="section-header">
+        <div class="section-tag">ENGINEERED FOR REAL ACADEMICS</div>
+        <h2 class="section-title">Everything you need to master your semester</h2>
+        <p class="section-description">
+          Built to eliminate guesswork. Accurate formulas, instant scenario simulations, and zero server dependencies.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1: Attendance -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h3 class="feature-title">Precision Attendance Engine</h3>
+          <p class="feature-desc">
+            Know exactly how many classes you can afford to miss without breaching the 75% cutoff, or how many consecutive classes you must attend to recover.
+          </p>
+          <div class="feature-formula-tag">
+            Margin = ⌊Attended / Req% - Conducted⌋
+          </div>
+        </div>
+
+        <!-- Feature 2: IA Predictor -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          </div>
+          <h3 class="feature-title">IA & Grade Predictor</h3>
+          <p class="feature-desc">
+            Configure your internal marking schemes (Midterms, Assignments, Viva) and instantly solve for the required end-semester exam score to lock in your target grade.
+          </p>
+          <div class="feature-formula-tag">
+            Required Exam = Target Threshold - Internals
+          </div>
+        </div>
+
+        <!-- Feature 3: Timetable -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <h3 class="feature-title">Live Schedule & Today View</h3>
+          <p class="feature-desc">
+            Never walk into the wrong lecture hall. Automatically surfaces ongoing classes and counts down the exact minutes to your next lecture.
+          </p>
+          <div class="feature-formula-tag">
+            Real-time second-by-second countdown
+          </div>
+        </div>
+
+        <!-- Feature 4: Deadlines -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <h3 class="feature-title">Exam & Deadline Tracker</h3>
+          <p class="feature-desc">
+            Keep track of practical exams, assignments, mini projects, and university finals with ticking days, hours, and minutes timers.
+          </p>
+          <div class="feature-formula-tag">
+            Live dynamic countdown clocks
+          </div>
+        </div>
+
+        <!-- Feature 5: Analytics -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </div>
+          <h3 class="feature-title">Academic Intelligence</h3>
+          <p class="feature-desc">
+            Chart.js visualizations for subject-wise attendance thresholds, risk distribution doughnuts, and target vs projected exam scores.
+          </p>
+          <div class="feature-formula-tag">
+            Chart.js dynamic visual metrics
+          </div>
+        </div>
+
+        <!-- Feature 6: Offline & Private -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <h3 class="feature-title">100% Offline-First & Private</h3>
+          <p class="feature-desc">
+            Your marks, attendance, and timetable remain strictly in your browser's IndexedDB. Zero servers, zero logins, and complete JSON export/import.
+          </p>
+          <div class="feature-formula-tag">
+            IndexedDB + Service Worker PWA
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Section -->
+    <section class="privacy-section" id="privacy-section">
+      <div class="privacy-card">
+        <div>
+          <div class="privacy-badge">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            Zero Cloud Tracking
+          </div>
+          <h2 class="privacy-title">Your academic data stays on your device.</h2>
+          <p class="privacy-text">
+            PADIPP.OS does not send personal academic data to any server. No accounts, no emails, no phone numbers, and no corporate tracking. All calculations run client-side on your processor.
+          </p>
+        </div>
+        <div class="privacy-highlights">
+          <div class="privacy-item">
+            <svg class="privacy-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Local IndexedDB persistence
+          </div>
+          <div class="privacy-item">
+            <svg class="privacy-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Complete JSON backup & restore
+          </div>
+          <div class="privacy-item">
+            <svg class="privacy-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Works completely offline via PWA
+          </div>
+          <div class="privacy-item">
+            <svg class="privacy-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            No third-party analytics cookies
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section style="text-align:center; padding: 40px 24px 80px; max-width:var(--container-max-width); margin:0 auto;">
+      <h2 style="font-size:2.2rem; font-weight:800; margin-bottom:14px;">Ready to take control of your semester?</h2>
+      <p style="font-size:1.05rem; color:var(--text-secondary); margin-bottom:28px;">
+        Open the dashboard now. Preloaded with realistic Kerala academic sample data or start fresh with your own subjects.
+      </p>
+      <a href="#overview" class="btn btn-primary btn-lg">
+        Launch PADIPP.OS →
+      </a>
+    </section>
+
+    <!-- Minimal Compact Professional Footer -->
+    <footer class="landing-footer">
+      <div class="footer-container">
+        <div class="footer-brand-meta">
+          <div class="brand-logo">
+            <span class="brand-main">PADIPP</span><span class="brand-suffix">.OS</span>
+          </div>
+          <span class="brand-origin-badge">From Trivandrum, Kerala</span>
+          <span class="footer-tagline">Track. Plan. Predict.</span>
+        </div>
+
+        <div class="footer-dev">
+          <span>Built by</span>
+          <a href="https://karthiiiidev.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+            karthiiii.dev
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 2. DASHBOARD APP VIEW                      -->
+  <!-- ========================================== -->
+  <div id="app-wrapper" class="app-wrapper" style="display:none;">
+    <!-- Mobile Sidebar Backdrop -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+    <!-- Desktop / Tablet Left Sidebar -->
+    <aside class="app-sidebar" id="app-sidebar">
+      <div class="sidebar-brand-area">
+        <a href="#overview" class="brand-logo">
+          <span class="brand-main">PADIPP</span><span class="brand-suffix">.OS</span>
+        </a>
+        <span class="brand-origin-badge">From Trivandrum, Kerala</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#overview" class="nav-item active" data-tab="overview">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          Overview
+        </a>
+        <a href="#attendance" class="nav-item" data-tab="attendance">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          Attendance
+        </a>
+        <a href="#ia" class="nav-item" data-tab="ia">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          IA Predictor
+        </a>
+        <a href="#timetable" class="nav-item" data-tab="timetable">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Timetable
+        </a>
+        <a href="#events" class="nav-item" data-tab="events">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          Exams & Deadlines
+        </a>
+        <a href="#analytics" class="nav-item" data-tab="analytics">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          Analytics
+        </a>
+        <a href="#settings" class="nav-item" data-tab="settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-credit">
+          <span>Built by</span>
+          <a href="https://karthiiiidev.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+            karthiiii.dev
+          </a>
+        </div>
+        <a href="#landing" class="btn btn-ghost btn-sm" style="justify-content:flex-start; width:100%;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          Return to Landing
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main View Content Area -->
+    <main class="app-main">
+      <!-- Top App Bar -->
+      <header class="app-header">
+        <div class="header-left">
+          <button class="btn btn-ghost btn-icon mobile-menu-btn" id="btn-mobile-menu" aria-label="Open Navigation Menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <div class="header-title-wrapper">
+            <h1 class="header-view-title" id="header-title">Academic Overview</h1>
+            <span class="header-view-subtitle" id="header-subtitle">Status, next classes and active deadlines</span>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <button class="btn btn-secondary btn-sm" id="btn-pwa-install" style="display:none;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Install App
+          </button>
+          <button class="btn btn-secondary btn-icon theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Dashboard Live Marquee Ticker -->
+      <div class="dashboard-marquee-ticker">
+        <div class="dash-marquee-track">
+          <div class="dash-marquee-content">
+            <span><span class="dash-live-dot"></span>SYSTEM OPERATIONAL</span>
+            <span class="dash-marquee-sep">•</span>
+            <span>ALL DATA PERSISTED LOCALLY IN INDEXEDDB</span>
+            <span class="dash-marquee-sep">•</span>
+            <span>ZERO CLOUD TELEMETRY</span>
+            <span class="dash-marquee-sep">•</span>
+            <span>ATTENDANCE BUFFER &amp; RECOVERY COMPLIANT</span>
+            <span class="dash-marquee-sep">•</span>
+            <span>REAL-TIME CLASS DETECTION</span>
+            <span class="dash-marquee-sep">•</span>
+            <span>TRIVANDRUM, KERALA</span>
+            <span class="dash-marquee-sep">•</span>
+          </div>
+          <div class="dash-marquee-content" aria-hidden="true">
+            <span><span class="dash-live-dot"></span>SYSTEM OPERATIONAL</span>
+            <span class="dash-marquee-sep">•</span>
+            <span>ALL DATA PERSISTED LOCALLY IN INDEXEDDB</span>
+            <span class="dash-marquee-sep">•</span>
+            <span>ZERO CLOUD TELEMETRY</span>
+            <span class="dash-marquee-sep">•</span>
+            <span>ATTENDANCE BUFFER &amp; RECOVERY COMPLIANT</span>
+            <span class="dash-marquee-sep">•</span>
+            <span>REAL-TIME CLASS DETECTION</span>
+            <span class="dash-marquee-sep">•</span>
+            <span>TRIVANDRUM, KERALA</span>
+            <span class="dash-marquee-sep">•</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dynamic Views Wrapper -->
+      <div class="view-content-container">
+
+        <!-- TAB 1: OVERVIEW -->
+        <div class="view-panel active" id="tab-overview">
+          <!-- Top Metrics Row -->
+          <div class="overview-metrics-grid">
+            <!-- Metric 1: Overall Attendance -->
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-title">Overall Attendance</span>
+                <span class="badge badge-safe" id="ov-att-badge">SAFE</span>
+              </div>
+              <div class="metric-main">
+                <span class="metric-value" id="ov-att-percentage">82.6%</span>
+              </div>
+              <div class="metric-sub" id="ov-att-ratio">36 / 42 classes</div>
+              <div class="metric-footer" id="ov-att-footer">
+                Can safely miss 2 classes
+              </div>
+            </div>
+
+            <!-- Metric 2: IA Performance -->
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-title">IA Performance</span>
+                <span class="badge badge-accent">ANALYSIS</span>
+              </div>
+              <div class="metric-main">
+                <span class="metric-value" id="ov-ia-score">35 / 40</span>
+              </div>
+              <div class="metric-sub" id="ov-ia-sub">87.5% internal score</div>
+              <div class="metric-footer" id="ov-ia-footer">
+                Target: Grade A (80+ pts)
+              </div>
+            </div>
+
+            <!-- Metric 3: Next Class -->
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-title">Next Class</span>
+                <span class="badge badge-neutral" id="overview-class-status-badge">UPCOMING</span>
+              </div>
+              <div class="metric-main">
+                <span class="metric-value" style="font-size:1.45rem;" id="overview-next-class-name">Loading...</span>
+              </div>
+              <div class="metric-sub" id="overview-next-class-time">--:-- — --:--</div>
+              <div class="metric-footer">
+                <span id="overview-next-class-room">Room --</span>
+                <strong style="font-family:var(--font-mono); color:var(--accent);" id="overview-next-class-countdown">00:00:00</strong>
+              </div>
+            </div>
+
+            <!-- Metric 4: Upcoming Exam -->
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-title">Upcoming Exam</span>
+                <span class="badge badge-warning" id="overview-exam-badge">EXAM</span>
+              </div>
+              <div class="metric-main">
+                <span class="metric-value" style="font-size:1.35rem;" id="overview-exam-name">Loading...</span>
+              </div>
+              <div class="metric-sub" id="overview-exam-time">3 days remaining</div>
+              <div class="metric-footer">
+                <a href="#events" style="font-weight:600;">View all deadlines →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Two Column View (Today's Timeline & Quick Actions) -->
+          <div class="overview-columns-grid">
+            <!-- Left: Today's Schedule -->
+            <div class="section-box">
+              <div class="section-box-header">
+                <div class="section-box-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  Today's Schedule
+                </div>
+                <a href="#timetable" class="btn btn-ghost btn-sm">Full Week →</a>
+              </div>
+              <div class="section-box-body">
+                <div class="today-timeline" id="overview-today-timeline">
+                  <!-- Injected dynamically via timetableEngine -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Academic Quick Links & Data Health -->
+            <div class="section-box">
+              <div class="section-box-header">
+                <div class="section-box-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                  Quick Actions & Operations
+                </div>
+              </div>
+              <div class="section-box-body" style="display:flex; flex-direction:column; gap:14px;">
+                <div style="padding:14px; background:var(--bg-surface-elevated); border-radius:var(--radius-sm); border:1px solid var(--border-color);">
+                  <div style="font-weight:700; font-size:0.95rem; margin-bottom:4px;">Mark Class Attendance</div>
+                  <p style="font-size:0.8rem; color:var(--text-secondary); margin-bottom:10px;">Increment attended or conducted classes directly from the subject deck.</p>
+                  <a href="#attendance" class="btn btn-primary btn-sm">Open Attendance Tracker</a>
+                </div>
+
+                <div style="padding:14px; background:var(--bg-surface-elevated); border-radius:var(--radius-sm); border:1px solid var(--border-color);">
+                  <div style="font-weight:700; font-size:0.95rem; margin-bottom:4px;">Internal Assessment Forecast</div>
+                  <p style="font-size:0.8rem; color:var(--text-secondary); margin-bottom:10px;">Solve for the required end-semester marks needed for your target grade.</p>
+                  <a href="#ia" class="btn btn-secondary btn-sm">Open IA Predictor</a>
+                </div>
+
+                <div style="padding:14px; background:var(--bg-surface-elevated); border-radius:var(--radius-sm); border:1px solid var(--border-color);">
+                  <div style="font-weight:700; font-size:0.95rem; margin-bottom:4px;">Local Device Storage</div>
+                  <p style="font-size:0.8rem; color:var(--text-secondary); margin-bottom:10px;">100% private to your browser. Export full JSON backup anytime.</p>
+                  <button class="btn btn-secondary btn-sm" onclick="window.dataManager.exportData()">Export Backup JSON</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: ATTENDANCE MANAGER -->
+        <div class="view-panel" id="tab-attendance">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; flex-wrap:wrap; gap:16px;">
+            <div>
+              <h2 style="font-size:1.35rem; font-weight:700;">Subject Compliance Cards</h2>
+              <p style="font-size:0.85rem; color:var(--text-secondary);">Calculates maximum allowable leaves or required consecutive attendance.</p>
+            </div>
+            <button class="btn btn-primary" id="btn-add-subject">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              Add Subject
+            </button>
+          </div>
+
+          <div class="subjects-grid" id="subjects-grid">
+            <!-- Subject cards injected by attendanceEngine -->
+          </div>
+        </div>
+
+        <!-- TAB 3: IA PREDICTOR -->
+        <div class="view-panel" id="tab-ia">
+          <div id="ia-container">
+            <!-- IA Predictor injected by iaPredictor -->
+          </div>
+        </div>
+
+        <!-- TAB 4: TIMETABLE -->
+        <div class="view-panel" id="tab-timetable">
+          <div id="timetable-container">
+            <!-- Timetable injected by timetableEngine -->
+          </div>
+        </div>
+
+        <!-- TAB 5: EXAMS & DEADLINES -->
+        <div class="view-panel" id="tab-events">
+          <div id="events-container">
+            <!-- Deadlines injected by eventsManager -->
+          </div>
+        </div>
+
+        <!-- TAB 6: ANALYTICS -->
+        <div class="view-panel" id="tab-analytics">
+          <div class="charts-grid">
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3 style="font-size:1.05rem; font-weight:700;">Subject Attendance vs Cutoff</h3>
+                <span class="badge badge-neutral">75% Target</span>
+              </div>
+              <div class="chart-canvas-wrapper">
+                <canvas id="chart-subject-attendance"></canvas>
+              </div>
+            </div>
+
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3 style="font-size:1.05rem; font-weight:700;">Attendance Health Distribution</h3>
+                <span class="badge badge-accent">Risk Status</span>
+              </div>
+              <div class="chart-canvas-wrapper">
+                <canvas id="chart-attendance-health"></canvas>
+              </div>
+            </div>
+
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3 style="font-size:1.05rem; font-weight:700;">Internal Marks Component Breakdown</h3>
+                <span class="badge badge-neutral">Scored vs Max</span>
+              </div>
+              <div class="chart-canvas-wrapper">
+                <canvas id="chart-ia-performance"></canvas>
+              </div>
+            </div>
+
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3 style="font-size:1.05rem; font-weight:700;">Target vs Projected Exam Marks</h3>
+                <span class="badge badge-accent">Scenario Comparison</span>
+              </div>
+              <div class="chart-canvas-wrapper">
+                <canvas id="chart-target-vs-projected"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 7: SETTINGS -->
+        <div class="view-panel" id="tab-settings">
+          <div class="settings-section-card">
+            <div class="settings-header">Academic Configuration</div>
+            
+            <div class="settings-row">
+              <div class="settings-label-wrap">
+                <div class="settings-title">Minimum Required Attendance %</div>
+                <div class="settings-desc">Default threshold used to compute safe leave buffers and recovery targets.</div>
+              </div>
+              <div style="width:120px;">
+                <input type="number" id="settings-min-attendance" min="50" max="100" class="form-input" value="75">
+              </div>
+            </div>
+
+            <div class="settings-row">
+              <div class="settings-label-wrap">
+                <div class="settings-title">Semester / Cohort Title</div>
+                <div class="settings-desc">Label displayed across overviews and exports.</div>
+              </div>
+              <div style="width:240px;">
+                <input type="text" id="settings-semester-name" class="form-input" value="Semester VI (B.Tech CSE)">
+              </div>
+            </div>
+
+            <div class="settings-row">
+              <div class="settings-label-wrap">
+                <div class="settings-title">Maximum Internal Marks</div>
+                <div class="settings-desc">Typical college internal assessment total scale (e.g. 40 or 50).</div>
+              </div>
+              <div style="width:120px;">
+                <input type="number" id="settings-max-internal" min="10" max="100" class="form-input" value="40">
+              </div>
+            </div>
+
+            <div class="settings-row">
+              <div class="settings-label-wrap">
+                <div class="settings-title">Maximum End-Semester Exam Marks</div>
+                <div class="settings-desc">University final theoretical examination weightage (e.g. 60 or 50).</div>
+              </div>
+              <div style="width:120px;">
+                <input type="number" id="settings-max-exam" min="10" max="100" class="form-input" value="60">
+              </div>
+            </div>
+
+            <div style="margin-top:20px; display:flex; justify-content:flex-end;">
+              <button class="btn btn-primary btn-sm" id="btn-save-settings">Save Academic Settings</button>
+            </div>
+          </div>
+
+          <div class="settings-section-card">
+            <div class="settings-header">Data & Privacy Management</div>
+
+            <div class="settings-row">
+              <div class="settings-label-wrap">
+                <div class="settings-title">Export Academic Backup</div>
+                <div class="settings-desc">Download a complete structured JSON file of all subjects, marks, timetable, and deadlines.</div>
+              </div>
+              <button class="btn btn-secondary btn-sm" id="btn-export-data">Export Data JSON</button>
+            </div>
+
+            <div class="settings-row">
+              <div class="settings-label-wrap">
+                <div class="settings-title">Import Academic Backup</div>
+                <div class="settings-desc">Restore your academic system from a previous JSON backup.</div>
+              </div>
+              <button class="btn btn-secondary btn-sm" id="btn-import-data">Import Data</button>
+              <input type="file" id="import-file-input" accept=".json" style="display:none;">
+            </div>
+
+            <div class="settings-row">
+              <div class="settings-label-wrap">
+                <div class="settings-title">Load Sample Academic Data</div>
+                <div class="settings-desc">Populate demo engineering courses, internal marks, timetable, and exams for testing.</div>
+              </div>
+              <button class="btn btn-secondary btn-sm" id="btn-load-demo-data">Load Demo Data</button>
+            </div>
+
+            <div class="settings-row">
+              <div class="settings-label-wrap">
+                <div class="settings-title text-danger">Reset All Application Data</div>
+                <div class="settings-desc">Permanently wipe all local IndexedDB database stores on this browser.</div>
+              </div>
+              <button class="btn btn-danger btn-sm" id="btn-reset-data">Reset Database</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Persistent Dashboard Footer across all tabs -->
+      <footer class="app-dashboard-footer">
+        <div class="dash-footer-container">
+          <div class="dash-footer-left">
+            <span class="dash-footer-brand">PADIPP.OS</span>
+            <span class="dash-footer-bullet">•</span>
+            <span>Your Academic Operating System</span>
+            <span class="dash-footer-bullet">•</span>
+            <span>From Trivandrum, Kerala</span>
+          </div>
+          <div class="dash-footer-right">
+            <span>Built by</span>
+            <a href="https://karthiiiidev.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+              karthiiii.dev
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+      <a href="#overview" class="mobile-nav-item active" data-tab="overview">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        <span>Overview</span>
+      </a>
+      <a href="#attendance" class="mobile-nav-item" data-tab="attendance">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span>Attendance</span>
+      </a>
+      <a href="#ia" class="mobile-nav-item" data-tab="ia">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+        <span>IA</span>
+      </a>
+      <a href="#timetable" class="mobile-nav-item" data-tab="timetable">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        <span>Schedule</span>
+      </a>
+      <a href="#events" class="mobile-nav-item" data-tab="events">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+        <span>Exams</span>
+      </a>
+      <a href="#settings" class="mobile-nav-item" data-tab="settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>Settings</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 3. MODALS                                  -->
+  <!-- ========================================== -->
+
+  <!-- Subject Modal -->
+  <div class="modal-backdrop" id="modal-subject">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-subject-title">Add Academic Subject</h3>
+        <button class="btn btn-ghost btn-sm btn-icon modal-close" aria-label="Close">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <form id="form-subject">
+        <div class="modal-body">
+          <input type="hidden" id="subject-id">
+          <div class="form-group">
+            <label class="form-label">Subject Name *</label>
+            <input type="text" id="subject-name" class="form-input" placeholder="e.g. Operating Systems" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Subject Code / Course No.</label>
+            <input type="text" id="subject-code" class="form-input" placeholder="e.g. CST 304">
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <div class="form-group">
+              <label class="form-label">Conducted Classes *</label>
+              <input type="number" id="subject-conducted" class="form-input" min="0" value="0" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Attended Classes *</label>
+              <input type="number" id="subject-attended" class="form-input" min="0" value="0" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Minimum Required Attendance (%) *</label>
+            <input type="number" id="subject-min-req" class="form-input" min="1" max="100" value="75" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Subject</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Timetable Class Modal -->
+  <div class="modal-backdrop" id="modal-class">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-class-title">Add Timetable Class</h3>
+        <button class="btn btn-ghost btn-sm btn-icon modal-close" aria-label="Close">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <form id="form-class">
+        <div class="modal-body">
+          <input type="hidden" id="class-id">
+          <div class="form-group">
+            <label class="form-label">Day of Week *</label>
+            <select id="class-day" class="form-select" required>
+              <option value="1">Monday</option>
+              <option value="2">Tuesday</option>
+              <option value="3">Wednesday</option>
+              <option value="4">Thursday</option>
+              <option value="5">Friday</option>
+              <option value="6">Saturday</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Subject / Class Name *</label>
+            <input type="text" id="class-subject-name" class="form-input" placeholder="e.g. Compiler Design" required>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <div class="form-group">
+              <label class="form-label">Start Time *</label>
+              <input type="time" id="class-start-time" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">End Time *</label>
+              <input type="time" id="class-end-time" class="form-input" required>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <div class="form-group">
+              <label class="form-label">Room / Hall</label>
+              <input type="text" id="class-room" class="form-input" placeholder="e.g. CS-204">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Teacher / Faculty</label>
+              <input type="text" id="class-teacher" class="form-input" placeholder="e.g. Dr. Radhika">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Class</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Event / Deadline Modal -->
+  <div class="modal-backdrop" id="modal-event">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-event-title">Add Academic Deadline</h3>
+        <button class="btn btn-ghost btn-sm btn-icon modal-close" aria-label="Close">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <form id="form-event">
+        <div class="modal-body">
+          <input type="hidden" id="event-id">
+          <div class="form-group">
+            <label class="form-label">Deadline / Event Title *</label>
+            <input type="text" id="event-title" class="form-input" placeholder="e.g. Physics Midterm Examination" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Event Type *</label>
+            <select id="event-type" class="form-select" required>
+              <option value="exam">Exam / Test</option>
+              <option value="assignment">Assignment</option>
+              <option value="project">Project / Viva</option>
+              <option value="submission">Lab Submission</option>
+              <option value="other">Other Deadline</option>
+            </select>
+          </div>
+          <div style="display:grid; grid-template-columns:1.2fr 1fr; gap:12px;">
+            <div class="form-group">
+              <label class="form-label">Date *</label>
+              <input type="date" id="event-date" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Time</label>
+              <input type="time" id="event-time" class="form-input" value="10:00">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Notes & Syllabus</label>
+            <textarea id="event-notes" class="form-textarea" rows="3" placeholder="Portions, submissions instructions, or deliverables..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Deadline</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Application Scripts -->
+  <script src="./js/toast.js"></script>
+  <script src="./js/theme.js"></script>
+  <script src="./js/db.js"></script>
+  <script src="./js/attendance.js"></script>
+  <script src="./js/ia-predictor.js"></script>
+  <script src="./js/timetable.js"></script>
+  <script src="./js/events.js"></script>
+  <script src="./js/analytics.js"></script>
+  <script src="./js/export-import.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

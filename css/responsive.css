@@ -1,0 +1,472 @@
+/* ============================================================
+   PADIPP.OS — Responsive Layout
+   Breakpoints: 1280 → 1024 → 768 → 480 → 414 → 360
+   ============================================================ */
+
+/* --- Utility: Hidden by default (shown via media query) --- */
+.mobile-menu-btn {
+  display: none;
+}
+
+.landing-origin-tag {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .landing-origin-tag {
+    display: inline-flex;
+  }
+}
+
+/* ============================================================
+   LARGE TABLET  (≤ 1280px)
+   ============================================================ */
+@media (max-width: 1280px) {
+  .overview-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .overview-columns-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   TABLET & COMPACT LAPTOP  (≤ 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+  .preview-content-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ia-calculator-container {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .privacy-card {
+    gap: 32px;
+  }
+}
+
+/* ============================================================
+   MOBILE  (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  :root {
+    --sidebar-width: 0px;
+    --header-height: 56px;
+  }
+
+  /* Safe area bottom padding (notched phones) */
+  body {
+    padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* ---- Sidebar ---- */
+  .app-sidebar {
+    transform: translateX(-100%);
+    width: 280px;
+    box-shadow: var(--shadow-xl);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .app-sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .sidebar-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 85;
+  }
+
+  .sidebar-backdrop.active {
+    display: block;
+  }
+
+  /* ---- Main layout ---- */
+  .app-main {
+    margin-left: 0;
+    max-width: 100vw;
+    width: 100%;
+  }
+
+  .app-header {
+    padding: 0 16px;
+  }
+
+  .view-content-container {
+    padding: 16px 14px 24px;
+  }
+
+  /* ---- Mobile nav ---- */
+  .mobile-bottom-nav {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+
+  /* ---- Dashboard footer: hide on mobile (overlaps bottom nav) ---- */
+  .app-dashboard-footer {
+    display: none;
+  }
+
+  /* ---- Landing nav ---- */
+  .landing-nav-container {
+    padding: 0 16px;
+  }
+
+  .landing-nav-links {
+    display: none;
+  }
+
+  /* ---- Hero ---- */
+  .hero-section {
+    padding: 40px 16px 36px;
+    text-align: center;
+  }
+
+  .hero-badge {
+    margin: 0 auto 16px;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-tagline {
+    font-size: 0.8rem;
+  }
+
+  /* ---- Browser mockup ---- */
+  .browser-mockup-wrapper {
+    margin-top: 32px;
+  }
+
+  .preview-content-grid {
+    grid-template-columns: 1fr;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  /* ---- Features ---- */
+  .features-section {
+    padding: 52px 16px 36px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* ---- Privacy ---- */
+  .privacy-card {
+    grid-template-columns: 1fr;
+    padding: 28px 18px;
+    gap: 20px;
+  }
+
+  /* ---- Landing footer ---- */
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* ---- Overview metrics ---- */
+  .overview-metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .overview-columns-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* ---- Attendance ---- */
+  .subjects-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .subject-card-actions {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  /* ---- IA Calculator ---- */
+  .ia-component-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .ia-component-row input:first-child,
+  .ia-component-row select:first-child {
+    grid-column: span 2;
+  }
+
+  /* ---- Timetable ---- */
+  .timetable-day-nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+    gap: 6px;
+    flex-wrap: nowrap;
+  }
+
+  .timetable-day-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .day-pill {
+    flex-shrink: 0;
+    padding: 6px 14px;
+    font-size: 0.82rem;
+  }
+
+  .timetable-class-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .class-card-time {
+    font-size: 0.8rem;
+  }
+
+  /* ---- Events ---- */
+  .event-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .event-card-right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .event-countdown-boxes {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .event-countdown-box {
+    min-width: 52px;
+    padding: 6px 8px;
+  }
+
+  /* ---- Analytics ---- */
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .chart-canvas-wrapper {
+    height: 220px;
+  }
+
+  .chart-card {
+    padding: 16px;
+  }
+
+  /* ---- Settings ---- */
+  .settings-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .settings-panel {
+    padding: 20px 16px;
+  }
+
+  .data-management-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .data-management-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ---- Modals ---- */
+  .modal-dialog {
+    max-width: calc(100vw - 24px);
+    width: calc(100vw - 24px);
+    margin: 12px auto;
+    padding: 20px 16px;
+    max-height: calc(100vh - 24px);
+    overflow-y: auto;
+  }
+
+  .modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .modal-dialog {
+    border-radius: 20px 20px 0 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    max-height: 90vh;
+  }
+
+  /* ---- Section boxes ---- */
+  .section-box {
+    padding: 16px 14px;
+  }
+
+  /* ---- Today timeline ---- */
+  .today-timeline-item {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+}
+
+/* ============================================================
+   SMALL PHONES  (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .view-content-container {
+    padding: 12px 12px 20px;
+  }
+
+  .ia-component-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .ia-component-row input:first-child,
+  .ia-component-row select:first-child {
+    grid-column: span 1;
+  }
+
+  .simulator-output-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .subject-attendance-row {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .subject-card-actions {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .subject-card-actions .btn {
+    flex: 1;
+  }
+}
+
+/* ============================================================
+   SMALL PHONES  (≤ 414px)
+   ============================================================ */
+@media (max-width: 414px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .metric-card {
+    padding: 16px 14px;
+  }
+
+  .chart-canvas-wrapper {
+    height: 200px;
+  }
+}
+
+/* ============================================================
+   VERY SMALL PHONES  (≤ 360px)
+   ============================================================ */
+@media (max-width: 360px) {
+  :root {
+    --header-height: 52px;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .brand-logo .brand-main {
+    font-size: 1.2rem;
+  }
+
+  .metric-value {
+    font-size: 1.75rem;
+  }
+
+  .attendance-percentage {
+    font-size: 1.75rem;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.82rem;
+  }
+
+  .app-header-title {
+    font-size: 0.9rem;
+  }
+
+  .event-countdown-box {
+    min-width: 44px;
+    padding: 5px 6px;
+  }
+
+  .event-countdown-box .count-value {
+    font-size: 1.1rem;
+  }
+
+  .view-content-container {
+    padding: 10px 10px 16px;
+  }
+}
